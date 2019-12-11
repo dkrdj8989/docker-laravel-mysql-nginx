@@ -44,6 +44,7 @@ services:
       MYSQL_DATABASE: 'laravel'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'secret'
+      MYSQL_ROOT_PASSWORD: 'password'
     ports:
       - 3306:3306
     volumes:
