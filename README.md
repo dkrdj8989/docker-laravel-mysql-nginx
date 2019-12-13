@@ -14,23 +14,23 @@ docker-compose build
 docker-compose up -d
 ```
 
-#check docker images
+# check docker images
 ```
 docker images
 ```
 
-#check docker container 
+# check docker container 
  ```
 docker ps -a 
 ```
 
-#remove docker image
+# remove docker image
 ```
 single : docker rmi [image name] 
 all : docker image prune -a 
 ```
 
-#remove docker container
+# remove docker container
 ```
 single : docker rm [container name]
 all : docker rm -f `docker ps -a -q`
