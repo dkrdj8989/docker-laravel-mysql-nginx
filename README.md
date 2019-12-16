@@ -5,8 +5,6 @@ This is for development environment use
 To build the environment make sure you are in your projects root folder and run docker-compose build and let it run
 
 #install 
-first of all 
-create "www" folder in the root folder
 ```
 docker-compose build
 ```
