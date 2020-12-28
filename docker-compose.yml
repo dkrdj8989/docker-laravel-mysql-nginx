@@ -16,7 +16,7 @@ services:
       - ./docker/php/config/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
     env_file: .env
     ports:
-      - 9001:9001
+      - 9000:9000
     networks:
       - app-network
 
@@ -37,26 +37,26 @@ services:
     networks:
       - app-network
 
-  database:
-    image: mysql:5.7
-    container_name: database
-    environment:
-      MYSQL_DATABASE: 'laravel'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'secret'
-      MYSQL_ROOT_PASSWORD: 'password'
-    ports:
-      - 3306:3306
-    volumes:
-      - database-volume:/var/lib/mysql
-    depends_on:
-      - app
-    networks:
-      - app-network
-
-# Docker Volumes
-volumes:
-  database-volume:
+#  database:
+#    image: mysql:5.7
+#    container_name: database
+#    environment:
+#      MYSQL_DATABASE: 'laravel'
+#      MYSQL_USER: 'user'
+#      MYSQL_PASSWORD: 'secret'
+#      MYSQL_ROOT_PASSWORD: 'password'
+#    ports:
+#      - 3306:3306
+#    volumes:
+#      - database-volume:/var/lib/mysql
+#    depends_on:
+#      - app
+#    networks:
+#      - app-network
+#
+## Docker Volumes
+#volumes:
+#  database-volume:
 
 # Docker Networks
 networks:
